@@ -141,6 +141,24 @@
             text-decoration: underline;
         }
 
+        .message {
+            margin-top: 20px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: #edf2f7;
+            color: #2d3748;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .message.visible {
+            opacity: 1;
+        }
+
         @media (max-width: 640px) {
             .container {
                 padding: 40px 30px;
@@ -179,7 +197,11 @@
             Join us and experience the future of platform innovation.
         </p>
         
-        <a href="#" class="cta-button" id="accessButton">Access Lotus Platform</a>
+        <button type="button" class="cta-button" id="accessButton">Access Lotus Platform</button>
+        
+        <div class="message" id="message" role="status" aria-live="polite">
+            The app URL will be available soon. Stay tuned!
+        </div>
         
         <div class="features">
             <div class="feature">
@@ -207,10 +229,16 @@
 
     <script>
         // Add click handler for the access button
-        document.getElementById('accessButton').addEventListener('click', function(e) {
-            e.preventDefault();
-            // URL will be updated once available
-            alert('Welcome to Lotus Platform! The app URL will be available soon.');
+        document.getElementById('accessButton').addEventListener('click', function() {
+            // Show the message
+            const message = document.getElementById('message');
+            message.classList.add('visible');
+            
+            // Hide the message after 5 seconds
+            setTimeout(function() {
+                message.classList.remove('visible');
+            }, 5000);
+            
             // When URL is available, uncomment and update:
             // window.location.href = 'YOUR_APP_URL_HERE';
         });
