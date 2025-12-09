@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="You're invited to join Lotus Platform - Your gateway to enhanced productivity and collaboration">
-    <title>Lotus Platform - Invite Link</title>
+    <meta name="description" content="Collective rest and reflection. Enter the Lotus Platform immersive experience." />
+    <title>Lotus Platform · Invite</title>
     <style>
         * {
             margin: 0;
@@ -12,236 +12,292 @@
             box-sizing: border-box;
         }
 
+        :root {
+            color-scheme: dark;
+            --bg-outer: #040207;
+            --bg-inner: rgba(93, 60, 200, 0.35);
+            --bg-highlight: rgba(149, 96, 255, 0.6);
+            --text-primary: #f5f2ff;
+            --text-muted: rgba(245, 242, 255, 0.68);
+            --accent: #8c6bff;
+            --accent-strong: #c8a7ff;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: radial-gradient(140% 120% at 50% 0%, var(--bg-highlight) 0%, rgba(4, 2, 7, 0.85) 55%),
+                        radial-gradient(120% 120% at 50% 100%, var(--bg-inner) 10%, var(--bg-outer) 70%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            color: #333;
+            padding: 48px 24px;
+            color: var(--text-primary);
+            position: relative;
+            overflow: hidden;
         }
 
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
+        body::before,
+        body::after {
+            content: "";
+            position: absolute;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(152, 112, 255, 0.35) 0%, rgba(152, 112, 255, 0) 70%);
+            filter: blur(18px);
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        body::before {
+            top: 12%;
+            left: 8%;
+        }
+
+        body::after {
+            bottom: -6%;
+            right: -2%;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
             width: 100%;
-            padding: 60px 40px;
+            background: rgba(9, 6, 18, 0.55);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(200, 167, 255, 0.16);
+            border-radius: 28px;
+            padding: 64px 56px;
             text-align: center;
-            animation: fadeIn 0.6s ease-in;
+            box-shadow: 0 32px 120px rgba(17, 8, 44, 0.55);
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .logo {
-            font-size: 48px;
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            font-size: 0.78rem;
+            color: var(--text-muted);
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: bold;
-            letter-spacing: -1px;
+        }
+
+        .mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(200, 167, 255, 0.22);
+            background: rgba(12, 7, 26, 0.8);
+            margin-bottom: 32px;
+        }
+
+        .mark span {
+            font-size: 1.25rem;
         }
 
         h1 {
-            font-size: 32px;
-            margin-bottom: 16px;
-            color: #1a202c;
-            font-weight: 700;
+            font-size: clamp(2.5rem, 5vw, 3.6rem);
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
         }
 
-        .subtitle {
-            font-size: 18px;
-            color: #718096;
-            margin-bottom: 40px;
-            line-height: 1.6;
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            max-width: 540px;
+            margin: 0 auto 36px;
         }
 
         .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 16px 48px;
-            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 40px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(153, 111, 255, 0.92) 0%, rgba(92, 62, 210, 0.92) 100%);
+            color: var(--text-primary);
             text-decoration: none;
-            font-size: 18px;
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-            cursor: pointer;
-            border: none;
+            font-size: 1.05rem;
+            letter-spacing: 0.02em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 18px 40px rgba(92, 62, 210, 0.45);
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 22px 48px rgba(92, 62, 210, 0.55);
         }
 
         .cta-button:active {
             transform: translateY(0);
         }
 
-        .features {
-            margin-top: 50px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
+        .cta-button svg {
+            width: 18px;
+            height: 18px;
         }
 
-        .feature {
-            padding: 20px;
+        .note {
+            margin-top: 48px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
 
-        .feature-icon {
-            font-size: 36px;
-            margin-bottom: 12px;
+        footer {
+            margin-top: 32px;
+            font-size: 0.85rem;
+            color: rgba(245, 242, 255, 0.5);
         }
 
-        .feature-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 8px;
-        }
-
-        .feature-description {
-            font-size: 14px;
-            color: #718096;
-            line-height: 1.5;
-        }
-
-        .footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid #e2e8f0;
-            color: #a0aec0;
-            font-size: 14px;
-        }
-
-        .footer a {
-            color: #667eea;
+        footer a {
+            color: var(--accent-strong);
             text-decoration: none;
             font-weight: 500;
         }
 
-        .footer a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
 
-        .message {
-            margin-top: 20px;
-            padding: 12px 20px;
-            border-radius: 10px;
-            background: #edf2f7;
-            color: #2d3748;
-            font-size: 14px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .message.visible {
-            opacity: 1;
-        }
-
         @media (max-width: 640px) {
-            .container {
-                padding: 40px 30px;
+            body {
+                padding: 32px 16px;
             }
 
-            h1 {
-                font-size: 28px;
+            main {
+                padding: 48px 28px;
             }
 
-            .logo {
-                font-size: 40px;
+            .eyebrow {
+                letter-spacing: 0.32em;
+                font-size: 0.72rem;
             }
 
-            .subtitle {
-                font-size: 16px;
+            .mark {
+                font-size: 0.85rem;
+                gap: 6px;
+                padding: 8px 14px;
             }
 
-            .cta-button {
-                padding: 14px 36px;
-                font-size: 16px;
+            .description {
+                font-size: 1rem;
             }
 
-            .features {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .note {
+                font-size: 0.85rem;
+                letter-spacing: 0.04em;
             }
         }
+
+
+
+.hero-content {
+  position: relative;
+  max-width: 720px;
+  padding: 72px 64px 60px;
+  background: linear-gradient(180deg, rgba(11, 13, 33, 0.9) 0%, rgba(18, 19, 42, 0.92) 50%, rgba(14, 15, 31, 0.88) 100%);
+  border: 1px solid rgba(255, 216, 157, 0.35);
+  border-radius: 34px;
+  box-shadow: 0 50px 120px rgba(13, 16, 52, 0.85), 0 0 40px rgba(255, 216, 157, 0.26);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 232, 176, 0.2), rgba(95, 76, 255, 0));
+  filter: blur(24px);
+  z-index: -3;
+}
+
+.hero-content::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(26, 27, 55, 0.96), rgba(9, 10, 28, 0.82));
+  z-index: -2;
+}
+
+
+
+#hero-enter-xr {
+  min-width: 220px;
+  padding: 15px 32px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #04030f;
+  background: linear-gradient(180deg, #ffe49c 0%, #ffd05a 50%, #f7b33b 100%);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  letter-spacing: 0.03em;
+  box-shadow: 0 18px 40px rgba(255, 214, 122, 0.45), 0 0 24px rgba(255, 218, 147, 0.65);
+  position: relative;
+}
+
+#hero-enter-xr::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(255, 237, 189, 0.6), rgba(255, 203, 102, 0));
+  filter: blur(8px);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+#hero-enter-xr:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 48px rgba(255, 214, 122, 0.55), 0 0 32px rgba(255, 220, 160, 0.8);
+  filter: brightness(1.05);
+}
+
+#hero-enter-xr:hover::after {
+  opacity: 1;
+}
+
+#hero-enter-xr:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 10px 30px rgba(255, 204, 96, 0.5);
+}
+
+#hero-enter-xr:disabled {
+  cursor: progress;
+  opacity: 0.65;
+  box-shadow: none;
+}
+
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">🪷 Lotus</div>
-        <h1>You're Invited!</h1>
-        <p class="subtitle">
-            Welcome to Lotus Platform - Your gateway to enhanced productivity and seamless collaboration. 
-            Join us and experience the future of platform innovation.
+    <main class="hero-content">
+        <h1>Lotus Platform</h1>
+        <p class="description">
+            A meditation sanctuary where seekers gather to unlock latent skills, and descend into deeper realms of consciousness together.
         </p>
-        
-        <button type="button" class="cta-button" id="accessButton" aria-describedby="message">Access Lotus Platform</button>
-        
-        <div class="message" id="message" role="status" aria-live="polite">
-            The app URL will be available soon. Stay tuned!
-        </div>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <div class="feature-title">Lightning Fast</div>
-                <div class="feature-description">Experience blazing speed and performance</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🔒</div>
-                <div class="feature-title">Secure</div>
-                <div class="feature-description">Your data is protected with enterprise-grade security</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🌟</div>
-                <div class="feature-title">Intuitive</div>
-                <div class="feature-description">Simple, elegant, and easy to use</div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>Learn more about <a href="https://v0-lotus-platform-landing-page.vercel.app/" target="_blank" rel="noopener noreferrer">Lotus Platform</a></p>
-            <p style="margin-top: 10px;">© 2025 Lotus Platform. All rights reserved.</p>
-        </div>
-    </div>
-
-    <script>
-        // Add click handler for the access button
-        document.getElementById('accessButton').addEventListener('click', function() {
-            // Show the message
-            const message = document.getElementById('message');
-            message.classList.add('visible');
-            
-            // Hide the message after 5 seconds
-            setTimeout(function() {
-                message.classList.remove('visible');
-            }, 5000);
-            
-            // When URL is available, uncomment and update:
-            // window.location.href = 'YOUR_APP_URL_HERE';
-        });
-    </script>
+        <a id="hero-enter-xr" class="cta-button" href="https://lotus-platform-web-xr.vercel.app/" target="_blank" rel="noopener noreferrer">
+            Invite Link
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </a>
+    </main>
 </body>
 </html>
