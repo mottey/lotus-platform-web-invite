@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="You're invited to join Lotus Platform - Your gateway to enhanced productivity and collaboration">
+    <title>Lotus Platform - Invite Link</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 60px 40px;
+            text-align: center;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: #1a202c;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #718096;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .features {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .feature-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .feature-description {
+            font-size: 14px;
+            color: #718096;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+            color: #a0aec0;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: #edf2f7;
+            color: #2d3748;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .message.visible {
+            opacity: 1;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .logo {
+                font-size: 40px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                padding: 14px 36px;
+                font-size: 16px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🪷 Lotus</div>
+        <h1>You're Invited!</h1>
+        <p class="subtitle">
+            Welcome to Lotus Platform - Your gateway to enhanced productivity and seamless collaboration. 
+            Join us and experience the future of platform innovation.
+        </p>
+        
+        <button type="button" class="cta-button" id="accessButton" aria-describedby="message">Access Lotus Platform</button>
+        
+        <div class="message" id="message" role="status" aria-live="polite">
+            The app URL will be available soon. Stay tuned!
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Lightning Fast</div>
+                <div class="feature-description">Experience blazing speed and performance</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">Secure</div>
+                <div class="feature-description">Your data is protected with enterprise-grade security</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌟</div>
+                <div class="feature-title">Intuitive</div>
+                <div class="feature-description">Simple, elegant, and easy to use</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Learn more about <a href="https://v0-lotus-platform-landing-page.vercel.app/" target="_blank" rel="noopener noreferrer">Lotus Platform</a></p>
+            <p style="margin-top: 10px;">© 2025 Lotus Platform. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Add click handler for the access button
+        document.getElementById('accessButton').addEventListener('click', function() {
+            // Show the message
+            const message = document.getElementById('message');
+            message.classList.add('visible');
+            
+            // Hide the message after 5 seconds
+            setTimeout(function() {
+                message.classList.remove('visible');
+            }, 5000);
+            
+            // When URL is available, uncomment and update:
+            // window.location.href = 'YOUR_APP_URL_HERE';
+        });
+    </script>
+</body>
+</html>
